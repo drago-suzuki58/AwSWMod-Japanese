@@ -21,6 +21,7 @@
 ## 対応Mod
 
 - [Core Mod](https://steamcommunity.com/sharedfiles/filedetails/?id=1305731599)
+- [Mod Conflict Avoidance](https://steamcommunity.com/sharedfiles/filedetails/?id=2961467898)
 - [Adine Romance Ending](https://steamcommunity.com/sharedfiles/filedetails/?id=1368945061)
 
 ## 更新履歴
@@ -33,6 +34,8 @@
   - 本編の翻訳パッチを追加
 - 2024/05/16 : v0.2
   - Core modの翻訳を追加
+- 2024/05/16 : v0.3
+  - [Mod Conflict Avoidance](https://steamcommunity.com/sharedfiles/filedetails/?id=2961467898)の翻訳を追加
 
 </details>
 
