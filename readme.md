@@ -28,6 +28,8 @@
 
 - 2024/05/15 : v0.1
   - [Adine Romance Ending](https://steamcommunity.com/sharedfiles/filedetails/?id=1368945061)の翻訳を追加
+- 2024/05/16 : v0.1.1
+  - 本編の翻訳パッチを追加
 
 </details>
 
