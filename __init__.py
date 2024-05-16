@@ -3,7 +3,7 @@ from modloader.modclass import Mod, loadable_mod
 @loadable_mod
 class AWSWMod(Mod):
     def mod_info(self):
-        return ("AwSWMod-Japanese", "v0.4.0", "DragoSuzuki58")
+        return ("AwSWMod-Japanese", "v0.4.1", "DragoSuzuki58")
 
     def mod_load(self):
         pass
