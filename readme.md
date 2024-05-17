@@ -42,6 +42,8 @@
 - 2024/05/16 : v0.4.1
   - Pythonで動く自動翻訳ツールを追加
     詳細は[tools_readme](tools/tools_readme.md)を参照
+- 2024/05/16 : v0.4.2
+  - 自動翻訳ツールの一部の問題を解消
 
 </details>
 

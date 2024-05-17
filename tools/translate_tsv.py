@@ -1,9 +1,22 @@
 import os
 import re
+import binascii
 from googletrans import Translator
 
 # tsvファイルのセリフのみ抽出して翻訳するプログラム
 # src: 翻訳元言語 dest: 翻訳先言語 で指定できる
+
+def base16_encode(s):
+    try:
+        return binascii.hexlify(s.encode()).decode()
+    except Exception:
+        return s
+
+def base16_decode(s):
+    try:
+        return binascii.unhexlify(s.encode()).decode()
+    except Exception:
+        return s
 
 def translate_lines(directory, filename, src='en', dest='ja'):
     translator = Translator()
@@ -16,15 +29,45 @@ def translate_lines(directory, filename, src='en', dest='ja'):
         parts = line.split('\t')
         text = parts[4].strip()
 
-        match = re.match(r'^(.*)"(.*)"$', text)
-        if match:
-            text_to_translate = match.group(2)
+        match_str = re.match(r'^(.*)"(.*)"$', text)
+        if match_str:
+            text_to_translate = match_str.group(2)
+
+            # Base16エンコードされるべき部分を探し、存在する場合はエンコードする
+            matches = re.findall(r'\[.*?\]', text_to_translate)
+            if matches:
+                for match in matches:
+                    encoded_match = base16_encode(match[1:-1])
+                    text_to_translate = text_to_translate.replace(match, '[' + encoded_match + ']')
+                    print(f'{match} -> {encoded_match}') # progress check
+
+            matches = re.findall(r'\{.*?\}', text_to_translate)
+            if matches:
+                for match in matches:
+                    encoded_match = base16_encode(match[1:-1])
+                    text_to_translate = text_to_translate.replace(match, '{' + encoded_match + '}')
+                    print(f'{match} -> {encoded_match}') # progress check
 
             result = translator.translate(text_to_translate, src=src, dest=dest)
             translated_text = result.text
 
-            parts[4] = f'{match.group(1)}"{translated_text}"'
-            print(f'{match.group(1)}"{translated_text}"') # progress check
+            # Base16デコードすべき部分を探し、存在する場合はデコードする
+            matches = re.findall(r'\{.*?\}', translated_text)
+            if matches:
+                for match in matches:
+                    decoded_match = base16_decode(match[1:-1])
+                    translated_text = translated_text.replace(match, '{' + decoded_match + '}')
+                    print(f'{match} -> {decoded_match}') # progress check
+
+            matches = re.findall(r'\[.*?\]', translated_text)
+            if matches:
+                for match in matches:
+                    decoded_match = base16_decode(match[1:-1])
+                    translated_text = translated_text.replace(match, '[' + decoded_match + ']')
+                    print(f'{match} -> {decoded_match}') # progress check
+
+            parts[4] = f'{match_str.group(1)}"{translated_text}"'
+            print(f'{match_str.group(1)}"{translated_text}"') # progress check
 
         translated_line = '\t'.join(parts)
         translated_lines.append(translated_line + '\n')
@@ -40,5 +83,5 @@ if __name__ == '__main__':
 
     files = os.listdir(directory)
     for filename in files:
-        if filename.endswith('.tsv'):
+        if filename.startswith('output_') and filename.endswith('.tsv'):
             translate_lines(directory, filename)
