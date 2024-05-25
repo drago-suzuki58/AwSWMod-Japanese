@@ -1,5 +1,15 @@
 # AwSW Mod 日本語訳Mod
 
+**注意：このブランチは現在、大きなバグを抱えています。修正が完了するまでの間、このブランチの利用は非推奨です。**
+
+代わりに[masterブランチ](https://github.com/drago-suzuki58/AwSWMod-Japanese/tree/master)を利用してください。
+
+## このブランチについて
+
+このブランチは、各ModのPythonファイル内に書かれている英語などを日本語訳し、利便性を高めるための機能についてのブランチです。  
+他のModのコードを直接操作するスクリプトですので、色々と不安定になりやすく、安定するまでは別のブランチで開発するという意図があります。  
+安定するまではバージョンは据え置きです。
+
 ## ダウンロード
 
 [こちら](https://github.com/drago-suzuki58/AwSWMod-Japanese/archive/refs/heads/master.zip)からダウンロードしてください。
