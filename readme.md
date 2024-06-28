@@ -41,17 +41,23 @@
   - [MagmaLink](https://steamcommunity.com/sharedfiles/filedetails/?id=2594080243)の翻訳を追加
 - 2024/05/16 : v0.4.1
   - Pythonで動く自動翻訳ツールを追加
-    詳細は[tools_readme](tools/tools_readme.md)を参照
+    詳細は~~[tools_readme](tools/tools_readme.md)~~を参照
 - 2024/05/16 : v0.4.2
   - 自動翻訳ツールの一部の問題を解消
+- 2024/06/29 : v0.4.3
+  - 自動翻訳ツールを別リポジトリへ移動し、削除
 
 </details>
 
 ## 自動翻訳ツールについて
 
-このリポジトリのtoolsフォルダに、Google翻訳を利用して使える簡単なMod翻訳ツールを追加しました。
+別リポジトリへ移動し、削除をしました。汎用性を高め、利便性が向上したかと思うのでぜひそちらを利用してください。
 
-詳細な使い方などは[tools_readme](tools/tools_readme.md)を参照してください。
+詳細については、[RenPy Translate Mod](https://github.com/drago-suzuki58/renpy_translate_mod)リポジトリを参照してください。
+
+~~このリポジトリのtoolsフォルダに、Google翻訳を利用して使える簡単なMod翻訳ツールを追加しました。~~
+
+~~詳細な使い方などは[tools_readme](tools/tools_readme.md)を参照してください。~~
 
 ## ライセンスと帰属について(About License and Attribution)
 
