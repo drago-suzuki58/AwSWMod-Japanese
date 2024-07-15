@@ -641,7 +641,7 @@ translate japanesetl adine6skip_e5e57fe5:
 
 translate japanesetl adine6skip_5cd82314:
 
-    m "私は波が打ち寄せるすぐそこまで向かい、平らな石を無駄な探し始めた。靴を脱ぐときに、肩越しに彼女を見ると、アディーンはにっこり笑っていた。"
+    m "私は波が打ち寄せるすぐそこまで向かい、平らな石を無駄に探し始めた。靴を脱ぐときに、肩越しに彼女を見ると、アディーンはにっこり笑っていた。"
 
 translate japanesetl adine6skip_77a995da:
 
