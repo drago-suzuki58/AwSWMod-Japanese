@@ -225,7 +225,7 @@ translate japanesetl adine_romance_end_0e5b71bb:
 
 translate japanesetl adine_romance_end_e0510168:
 
-    c "うん。今日はいい天気だし気分を変えるのも悪くはないだろuう？"
+    c "うん。今日はいい天気だし気分を変えるのも悪くはないだろう？"
 
 translate japanesetl adine_romance_end_10129e5c:
 
@@ -1515,7 +1515,7 @@ translate japanesetl strings:
     new "いいや、でもありがとう。"
 
     old "Actually, I changed my mind."
-    new "考え直した。"
+    new "やっぱりやめた。"
 
     old "Yes I want to skip ahead."
     new "はい。次にスキップします。"
